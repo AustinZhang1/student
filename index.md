@@ -12,10 +12,11 @@ title: Student Blog
 
 ## Freeform Picture!
 
-![image](https://media.discordapp.net/attachments/996245973300940802/1144038237866819636/IMG_2391.png?width=506&height=607)
+![image](/images/Freeformimage.jpg)
 
 - Plans, Lists, [Scrum Boards](https://clickup.com/blog/scrum-board/) help you to track key events, show progress and record time.  Effort is a big part of your class grade.  Show plans and time spent!
 - [Hacks(Todo)](https://levelup.gitconnected.com/six-ultimate-daily-hacks-for-every-programmer-60f5f10feae) enable you to stay in focus with key requirements of the class.  Each Hack will produce Tangibles.
 - Tangibles or [Tangible Artifacts](https://en.wikipedia.org/wiki/Artifact_(software_development)) are things you accumulate as a learner and coder. 
+- Hello!
 
 
