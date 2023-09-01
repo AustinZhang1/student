@@ -1,10 +1,10 @@
 ---
 toc: True
-comments: True
+comments: False
 layout: post
-title: Snake Game
-description: Snake 
-courses: {'csp': {'week': 1}}
+title: Snake Game 2
+description: Our own Snake game that we made 
+courses: {'compsci': {'week': 2}}
 type: hacks
 ---
 

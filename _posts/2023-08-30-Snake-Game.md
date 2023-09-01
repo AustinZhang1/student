@@ -2,8 +2,8 @@
 toc: True
 comments: False
 layout: post
-title: Snake Game Test
-description: Snake 
+title: Snake Game 1
+description: Copied snake game from Mr. Mortensen's source code 
 courses: {'compsci': {'week': 2}}
 type: hacks
 ---
