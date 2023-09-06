@@ -11,7 +11,7 @@ type: tangibles
 # Summary of Acomplishments 
 
 - Tangible:
-> We Created and filled in our Lab Notebook <br>
+> We Created and filled in our Time Box <br>
 > Used source code and copied it into our own code for Snake, Calculator, and Game of Life <br>
 > Created our own Snake game <br>
 > Created a table in HTML of my favorite soccer players <br>
