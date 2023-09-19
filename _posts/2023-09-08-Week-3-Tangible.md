@@ -11,7 +11,7 @@ type: tangibles
 # Summary of Acomplishments
 
 - Tangible:
-> We reviewed the blogs in the teacher repository on python and javascript
-> We coded a hangman game in python
-> We coded a GPA calculator in javascript
+> We reviewed the blogs in the teacher repository on python and javascript<br>
+> We coded a hangman game in python<br>
+> We coded a GPA calculator in javascript<br>
 > We prepared for and presented our pair showcase
