@@ -24,4 +24,6 @@ Each Hack
 
 Reviews and Scoring
 1 point: Have all of the different notebooks and cells made working in their own individual GitHub Pages with utterances and reviewers comments
+- I have all my notebooks working and have utterences on each notebook.
 .5 point: Make a summary review ticket based on the Total Test and utterances. Have a total of the other people’s scores that they collaborated with on the test
+- This is the summary review ticket based on the test and utterances. Total score: 4
