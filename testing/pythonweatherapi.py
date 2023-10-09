@@ -8,11 +8,26 @@ from datetime import date
 print(today)
 print(f"today's date: {today}")'''
 response = requests.get("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,precipitation_probability,precipitation&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles")
-print(response.status_code)
+#print(response.status_code)
 #print(response.json())
 weather = response.json()
-print(weather)
-def printweather(weather):
+#print(weather)
+
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+daystemp = []
+for i in range(31):
+    daystemp.append(str(i))
+
+def datemaker(date):
+    year = date[0:4:1]
+    print(year)
+dates = []
+for x in weather["daily"]["time"]:
+    dates.append(x)
+for i in range(len(dates)):
+    datemaker(dates[i])
+'''
+0def printweather(weather):
     counter = 0
     temps = []
     dates = []
@@ -40,7 +55,7 @@ printweather(weather)
 #print(weather["hourly"]["temperature_2m"][19])
 #print("\n\n\n\n\n\n\n")
 #print(weather)
-
+'''
 '''
 hourlyinfo = response.get('hourly')
 temps = hourlyinfo.get("temperature_2m")
