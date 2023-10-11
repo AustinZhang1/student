@@ -9,8 +9,32 @@ response = requests.get("https://api.open-meteo.com/v1/forecast?latitude=33.0142
 #print(response.status_code)
 #print(response.json())
 weather = response.json()
-print(weather)
-def printweather(weather):
+#print(weather)
+
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+daynumbers = []
+for i in range(31):
+    daynumbers.append(str(i))
+
+def datemaker(date):
+    year = date[0:4:1]
+    #print(year)
+    month = date[5:7:1]
+    month = months[int(month)-1]
+    #print(month)
+    day = date[8:10:1]
+    #print(day)
+    return f"{month} {day}, {year}"
+    
+    
+datestemp = []
+dates = []
+for x in weather["daily"]["time"]:
+    datestemp.append(x)
+for i in range(len(datestemp)):
+    dates.append(datemaker(datestemp[i]))
+
+def printweather(weather, dates):
     counter = 0
     temps = []
     precipitation = []
@@ -28,16 +52,15 @@ def printweather(weather):
             print(f"The chance of precipitation at {i} o'clock is {precipitation[counter]}%\n")
             counter += 1
 
-printweather(weather)
+printweather(weather, dates)
 
 
 
-#print(weather["hourly"]["temperature_2m"][19])
-#print("\n\n\n\n\n\n\n")
-#print(weather)
 
-'''
-hourlyinfo = response.get('hourly')
-temps = hourlyinfo.get("temperature_2m")
-print(temps[0])
-'''
+
+
+
+
+
+
+
