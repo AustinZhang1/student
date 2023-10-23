@@ -5,7 +5,7 @@ from datetime import date
 from flask import Flask, render_template
 
 
-response = requests.get("https://api.open-meteo.com/v1/forecast?latitude=33.014252&longitude=-117.121288&hourly=temperature_2m,precipitation_probability&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,precipitation_hours&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles")
+response = requests.get("https://api.open-meteo.com/v1/forecast?latitude=33.014252&longitude=-117.121288&hourly=temperature_2m,relativehumidity_2m,precipitation_probability,weathercode&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles")
 #print(response.status_code)
 #print(response.json())
 weather = response.json()
