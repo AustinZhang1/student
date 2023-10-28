@@ -12,9 +12,9 @@ courses: { compsci: {week: 6} }
 
 Each Hack
 .5 point: Have a working HTML code cell in a notebook based on the wireframe representation provided under HTML hacks (HTML Hack)
-- I have a working HTML code celll with the same components as the wireframe representation provided. 
+- I have a working HTML code cell with the same components as the wireframe representation provided. 
 .5 point: Have a working javascript code cell in a notebook based on the instructions provided under data types hacks (Data Types Hack)
-- I have a working javascript code cell that compares two numbers to see which is lrager and console logs the answer.
+- I have a working javascript code cell that compares two numbers to see which is larger and console logs the answer.
 .5 point: Have a working javascript code cell in a notebook which modifies elements in the first HTML code cell hack or another HTML code cell based on the same wireframe representation (DOM Hack)
 - I have working javascript code which modifies elements in a HTML code cell based on the given representation.
 .5 point: Have a working javascript code cell in a notebook based on the instructions provided in the javascript hack (Javascript Hack)
