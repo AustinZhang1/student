@@ -1,0 +1,630 @@
+---
+toc: true
+comments: false
+layout: post
+title: API HTML template code
+description: This is the code for the HTML frontend page that is in the passion project
+type: hacks
+courses: { "compsci": {week: 10} }
+---
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+<style>
+body {
+  width: 100%; 
+  height:100%;
+  margin:0em 0%;
+  background-color:#8ec1da;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/968/352/original/panorama-sky-with-cloud-on-a-sunny-day-free-photo.jpg");
+  background-position: center bottom;
+  animation: animatedBackground 500s linear infinite;
+  -webkit-animation: animatedBackground 500s linear infinite;
+
+}
+@keyframes animatedBackground {
+  from { background-position: 0 100%; }
+  to { background-position: 100% 100%; }
+}
+@-webkit-keyframes  animatedBackground {
+  from { background-position: 0 100%; }
+  to { background-position: 100% 100%; }
+}
+
+#content {
+  position:fixed;
+  top:4vw;
+  height:1em;
+  width:100vw;
+  color:white;
+  text-align: center;
+  font-size: 3.5vw;
+}
+
+.title {
+  position: fixed;
+  top: 14%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.weathercode {
+    position: fixed;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contain {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Styles for the transparent gray box */
+.transparent-box1 {
+    position: fixed;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box2 {
+    position: fixed;
+    top: 60%;
+    left: 25.45454545%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box3 {
+    position: fixed;
+    top: 60%;
+    left: 30.909090909%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box4 {
+    position: fixed;
+    top: 60%;
+    left: 36.363636363%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box5 {
+    position: fixed;
+    top: 60%;
+    left: 41.81818181%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box6 {
+    position: fixed;
+    top: 60%;
+    left: 47.27272727%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box7 {
+    position: fixed;
+    top: 60%;
+    left: 52.72727272%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box8 {
+    position: fixed;
+    top: 60%;
+    left: 58.18181818%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box9 {
+    position: fixed;
+    top: 60%;
+    left: 63.63636363%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box10 {
+    position: fixed;
+    top: 60%;
+    left: 69.09090909%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box11 {
+    position: fixed;
+    top: 60%;
+    left: 74.54545454%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box12 {
+    position: fixed;
+    top: 60%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box13 {
+    position: fixed;
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box14 {
+    position: fixed;
+    top: 80%;
+    left: 25.45454545%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box15 {
+    position: fixed;
+    top: 80%;
+    left: 30.90909090%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box16 {
+    position: fixed;
+    top: 80%;
+    left: 36.36363636%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box17 {
+    position: fixed;
+    top: 80%;
+    left: 41.81818181%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box18 {
+    position: fixed;
+    top: 80%;
+    left: 47.27272727%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box19 {
+    position: fixed;
+    top: 80%;
+    left: 52.72727272%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box20 {
+    position: fixed;
+    top: 80%;
+    left: 58.18181818%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box21 {
+    position: fixed;
+    top: 80%;
+    left: 63.63636363%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box22 {
+    position: fixed;
+    top: 80%;
+    left: 69.09090909%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box23 {
+    position: fixed;
+    top: 80%;
+    left: 74.54545454%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.transparent-box24 {
+    position: fixed;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.5); /* Transparent gray color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.get-weather {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(38, 152, 255, 0.5);
+    border: none;
+    width: 10%;
+    height: 12%;
+    border-radius: 10px;
+}
+
+.get-weather:hover {
+    background-color: rgba(82, 169, 255, 0.5)
+}
+
+/* Add some basic styling to the navigation bar */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+/* Style the navigation bar items */
+ul.navbar li {
+    float: left;
+}
+
+/* Style the links within the navigation bar */
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+ul.navbar li a:hover {
+    background-color: #555;
+}
+
+.big {
+    font-size: 3vw;
+}
+
+.enter-city {
+    position: fixed;
+    top: 65%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.input-box {
+    position: fixed;
+    top: 65%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.date {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.time {
+    position: fixed;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+</head>
+
+<body>
+
+<ul class="navbar">
+    <li><a href="#home">Weather</a></li>
+    <li><a href="#about">Calendar</a></li>
+    <li><a href="#services">To-do List</a></li>
+    <li><a href="#contact">Logout</a></li>
+</ul>
+
+<div class="contain">
+    <h1 class="big" id="city"></h1>
+</div>
+
+<div class="title">
+    <h1 id="title">San Diego Weather</h1>
+</div>
+
+<div class="weathercode">
+    <h1 id="weathercodeid"></h1>
+</div>
+
+<div class="date">
+    <h1 id="dateinner">Date: </h1>
+</div>
+
+<div class="time">
+    <h1 id="timeinner">Time: </h1>
+</div>
+
+<div class="transparent-box1">
+    <p><strong id="hour1">12 AM</strong><br><br><span id="hour1data">{{ info.hourly.temperature_2m[0] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[0] }}%</span></p>
+</div>
+
+<div class="transparent-box2">
+    <p><strong id="hour2">1 AM</strong><br><br><span id="hour2data">{{ info.hourly.temperature_2m[1] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[1] }}%</span></p>
+</div>
+
+<div class="transparent-box3">
+    <p><strong id="hour3">2 AM</strong><br><br><span id="hour3data">{{ info.hourly.temperature_2m[2] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[2] }}%</span></p>
+</div>
+
+<div class="transparent-box4">
+    <p><strong id="hour4">3 AM</strong><br><br><span id="hour4data">{{ info.hourly.temperature_2m[3] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[3] }}%</span></p>
+</div>
+
+<div class="transparent-box5">
+    <p><strong id="hour5">4 AM</strong><br><br><span id="hour5data">{{ info.hourly.temperature_2m[4] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[4] }}%</span></p>
+</div>
+
+<div class="transparent-box6">
+    <p><strong id="hour6">5 AM</strong><br><br><span id="hour6data">{{ info.hourly.temperature_2m[5] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[5] }}%</span></p>
+</div>
+
+<div class="transparent-box7">
+    <p><strong id="hour7">6 AM</strong><br><br><span id="hour7data">{{ info.hourly.temperature_2m[6] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[6] }}%</span></p>
+</div>
+
+<div class="transparent-box8">
+    <p><strong id="hour1">7 AM</strong><br><br><span id="hour8data">{{ info.hourly.temperature_2m[7] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[7] }}%</span></p>
+</div>
+
+<div class="transparent-box9">
+    <p><strong id="hour2">8 AM</strong><br><br><span id="hour9data">{{ info.hourly.temperature_2m[8] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[8] }}%</span></p>
+</div>
+
+<div class="transparent-box10">
+    <p><strong id="hour3">9 AM</strong><br><br><span id="hour10data">{{ info.hourly.temperature_2m[9] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[9] }}%</span></p>
+</div>
+
+<div class="transparent-box11">
+    <p><strong id="hour4">10 AM</strong><br><br><span id="hour11data">{{ info.hourly.temperature_2m[10] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[10] }}%</span></p>
+</div>
+
+<div class="transparent-box12">
+    <p><strong id="hour5">11 AM</strong><br><br><span id="hour12data">{{ info.hourly.temperature_2m[11] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[11] }}%</span></p>
+</div>
+
+<div class="transparent-box13">
+    <p><strong id="hour6">12 PM</strong><br><br><span id="hour13data">{{ info.hourly.temperature_2m[12] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[12] }}%</span></p>
+</div>
+
+<div class="transparent-box14">
+    <p><strong id="hour7">1 PM</strong><br><br><span id="hour14data">{{ info.hourly.temperature_2m[13] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[13] }}%</span></p>
+</div>
+
+<div class="transparent-box15">
+    <p><strong id="hour1">2 PM</strong><br><br><span id="hour15data">{{ info.hourly.temperature_2m[14] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[14] }}%</span></p>
+</div>
+
+<div class="transparent-box16">
+    <p><strong id="hour2">3 PM</strong><br><br><span id="hour16data">{{ info.hourly.temperature_2m[15] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[15] }}%</span></p>
+</div>
+
+<div class="transparent-box17">
+    <p><strong id="hour3">4 PM</strong><br><br><span id="hour17data">{{ info.hourly.temperature_2m[16] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[16] }}%</span></p>
+</div>
+
+<div class="transparent-box18">
+    <p><strong id="hour4">5 PM</strong><br><br><span id="hour18data">{{ info.hourly.temperature_2m[17] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[17] }}%</span></p>
+</div>
+
+<div class="transparent-box19">
+    <p><strong id="hour5">6 PM</strong><br><br><span id="hour19data">{{ info.hourly.temperature_2m[18] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[18] }}%</span></p>
+</div>
+
+<div class="transparent-box20">
+    <p><strong id="hour6">7 PM</strong><br><br><span id="hour20data">{{ info.hourly.temperature_2m[19] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[19] }}%</span></p>
+</div>
+
+<div class="transparent-box21">
+    <p><strong id="hour7">8 PM</strong><br><br><span id="hour21data">{{ info.hourly.temperature_2m[20] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[20] }}%</span></p>
+</div>
+
+<div class="transparent-box22">
+    <p><strong id="hour1">9 PM</strong><br><br><span id="hour22data">{{ info.hourly.temperature_2m[21] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[21] }}%</span></p>
+</div>
+
+<div class="transparent-box23">
+    <p><strong id="hour2">10 PM</strong><br><br><span id="hour23data">{{ info.hourly.temperature_2m[22] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[22] }}%</span></p>
+</div>
+
+<div class="transparent-box24">
+    <p><strong id="hour3">11 PM</strong><br><br><span id="hour24data">{{ info.hourly.temperature_2m[23] }} °F</span><br><span>{{ info.hourly.relativehumidity_2m[23] }}%</span></p>
+</div>
+
+<script>
+
+const weatherBackgrounds = {
+    'Clear': 'url(link_to_sunny_image)',
+    'Partly cloudy': 'url(link_to_partly_cloudy_image)',
+    'Cloudy': 'url(link_to_cloudy_image)',
+    'Rain': 'url(link_to_rainy_image)',
+  // Add more conditions and corresponding image URLs as needed
+};
+const wmoWeatherCodes = {
+    "0": "Sunny",
+    "1": "Mostly Sunny",
+    "2": "Partly Cloudy",
+    "3": "Overcast",
+    "45": "Fog",
+    "48": "Fog",
+    "51": "Light Drizzle",
+    "53": "Moderate Drizzle",
+    "55": "Dense Drizzle",
+    "56": "Light Freezing Drizzle",
+    "57": "Intense Freezing Drizzle",
+    "61": "Light Rain",
+    "63": "Moderate Rain",
+    "65": "Heavy Rain",
+    "66": "Light Freezing Rain",
+    "67": "Heavy Freezing Rain",
+    "71": "Light Snow",
+    "73": "Moderate Snow",
+    "75": "Heavy Snow",
+    "77": "Snow Grains",
+    "80": "Light Rain Showers",
+    "81": "Moderate Rain Showers",
+    "82": "Violent Rain Showers",
+    "85": "Light Snow Showers",
+    "86": "Heavy Snow Showers",
+    "95": "Thunderstorm",
+    "96": "Thunderstorm with Light Hail",
+    "99": "Thunderstorm with Heavy Hail",
+};
+
+function convertWMOWeatherCodeToDescription(code) {
+    if (wmoWeatherCodes.hasOwnProperty(code)) {
+        return wmoWeatherCodes[code];
+    } else {
+        return "Unknown";
+    }
+}
+
+
+async function updateWeather() {
+    try {
+        const data = {{ info|tojson|safe }}
+        const currentTime = new Date();
+        timeElement = document.getElementById("timeinner")
+        dayElement = document.getElementById("dateinner")
+        timenow = currentTime.toLocaleTimeString()
+        timeElement.textContent = currentTime.toLocaleTimeString();
+        hour = timenow[0] - 1
+        dayElement.textContent = currentTime.toLocaleDateString();
+
+        weathertypeElement = document.getElementById("weathercodeid")
+        weathertypeElement.textContent = convertWMOWeatherCodeToDescription(data.hourly.weathercode[hour]);
+        
+    } 
+    catch (error) {
+        console.error('Error fetching weather data:', error);
+    }
+}
+
+
+updateWeather(); // Initial call to load weather data
+
+setInterval(function () {
+    updateWeather();
+}, 1000);
+
+</script>
+</body>
+</html>

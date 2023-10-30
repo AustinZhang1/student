@@ -5,7 +5,7 @@ layout: post
 title: College Board Quiz
 description: This is a plan and review tool for the College Board MC quiz 
 type: hacks
-courses: { "compsci": {week: 0} }
+courses: { "compsci": {week: 10} }
 ---
 
 ## Plans
