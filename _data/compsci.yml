@@ -19,3 +19,8 @@ Unit4:
   description: Trimester 2 will begin with a Mini-project, CPT warmup. Great projects begin with frontend style. This project will focus on frontend; using SASS, JavaScript, interacting with user events, and representing Binary Algorithm(s). Student Teaching during this period will be preparing for College Board MCQ.
   start: 12
   end: 15
+Unit5:
+  title: Create Performance Task (CPT) kickoff, CPT design and development
+  description: Trimester 2 continues with CPT project design and development. The big focus is on frontend/backend for data, databases, and login.
+  start: 16
+  end: 19
