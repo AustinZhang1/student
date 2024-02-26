@@ -1,81 +1,59 @@
+<!-- 
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
 <head>
-    <style>
-      body {
-        background-color: #ffffff;
-        color: #000000;
-        font-family: Arial, sans-serif; /* Change font family for the entire page */
-      }
-  
-      form {
-        background-color: #000000;
-        color: #ffffff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 400px;
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
-      }
-  
-      label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-        font-family: Arial, sans-serif; /* Change font family for labels */
-      }
-  
-      input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        box-sizing: border-box;
-        border: 1px solid #ffffff;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: transparent;
-        color: #ffffff;
-        font-family: Arial, sans-serif; /* Change font family for input fields */
-      }
-  
-      input[type="password"] {
-        font-family: Arial, sans-serif; /* Change font family for password input */
-      }
-  
-      input[type="submit"] {
-        background-color: #ffffff;
-        color: #000000;
-        cursor: pointer;
-        border: none;
-        font-family: Arial, sans-serif; /* Change font family for submit button */
-      }
-  
-      input[type="submit"]:hover {
-        background-color: #eeeeee;
-      }
-  
-      .error-message {
-        color: #ff0000;
-        margin-top: 10px;
-      }
-  
-      .UUID {
-        font-family: Arial, sans-serif; /* Change font family for UUID label */
-      }
-  
-      .password-label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-        color: #ffffff;
-        font-family: Arial, sans-serif; /* Change font family for password label */
-      }
-    </style>
-  </head>
-  
+  <style>
+    form {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-family: Verdana, sans-serif;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      font-family: Verdana, sans-serif;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .error-message {
+      color: #ff0000;
+      margin-top: 10px;
+    }
+
+    .UUID {
+        font-family: Verdana, sans-serif;
+    }
+  </style>
+</head>
 
 <body>
   {%- include header.html -%}
@@ -86,7 +64,7 @@
       <form id="authenticate">
         <label for="uid" class="UUID">UUID</label>
         <input type="text" id="uid" name="uid"><br><br>
-        <label for="password" class="password-label">Password</label>
+        <label for="password">Password</label>
         <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Submit">
       </form>
@@ -139,4 +117,4 @@
   </main>
 </body>
 
-</html>
+</html> -->
