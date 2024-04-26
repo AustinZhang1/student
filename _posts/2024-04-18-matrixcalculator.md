@@ -135,15 +135,15 @@ permalink: matrix/
 		</div>
         <div id="matrix3" class="parent">
 			<h1 class="title">Result</h1>
-			<input class="m3r1" id="3.1.1" type="number" value="0"/>
-			<input class="m3r1" id="3.1.2" type="number" value="0"/>
-			<input class="m3r1" id="3.1.3" type="number" value="0"/>
-			<input class="m3r2" id="3.2.1" type="number" value="0"/>
-			<input class="m3r2" id="3.2.2" type="number" value="0"/>
-			<input class="m3r2" id="3.2.3" type="number" value="0"/>
-			<input class="m3r3" id="3.3.1" type="number" value="0"/>
-			<input class="m3r3" id="3.3.2" type="number" value="0"/>
-			<input class="m3r3" id="3.3.3" type="number" value="0"/>
+			<input class="m3r1" id="3.1.1" type="number" value="" readonly/>
+			<input class="m3r1" id="3.1.2" type="number" value="" readonly/>
+			<input class="m3r1" id="3.1.3" type="number" value="" readonly/>
+			<input class="m3r2" id="3.2.1" type="number" value="" readonly/>
+			<input class="m3r2" id="3.2.2" type="number" value="" readonly/>
+			<input class="m3r2" id="3.2.3" type="number" value="" readonly/>
+			<input class="m3r3" id="3.3.1" type="number" value="" readonly/>
+			<input class="m3r3" id="3.3.2" type="number" value="" readonly/>
+			<input class="m3r3" id="3.3.3" type="number" value="" readonly/>
 		</div>
 	</div>
 <script>
@@ -190,7 +190,6 @@ function matrixthree() {
     return matrix3
 }
 function addmatrix() {
-    console.log("adding")
     var m1 = matrixone()
     var m2 = matrixtwo()
     var temp
@@ -201,7 +200,6 @@ function addmatrix() {
     }
 }
 function subtractmatrix() {
-    console.log("subtracting")
     var m1 = matrixone()
     var m2 = matrixtwo()
     var temp
@@ -211,10 +209,24 @@ function subtractmatrix() {
         }
     }
 }
+function multiplymatrix() {
+    console.log("multiplying")
+    var m1 = matrixone()
+    var m2 = matrixtwo()
+    for (let i = 1; i < 4; i++) {
+        for (let j = 1; j < 4; j++) {
+            for (let a = 0; a < 3; a++) {
+                for (let b = 0; b < 3; b++) {
+                    document.getElementById("3."+i+"."+j+"").value = parseInt(m1[a][b]) * parseInt(m2[b][a])
+                }
+            }
+        }
+    }
+}
 function reset() {
     for (let i = 1; i < 4; i++) {
         for (let j = 1; j < 4; j++) {
-            document.getElementById("3."+i+"."+j+"").value = 0
+            document.getElementById("3."+i+"."+j+"").value = ""
         }
     }
 }
