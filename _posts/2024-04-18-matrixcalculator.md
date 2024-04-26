@@ -146,10 +146,34 @@ permalink: student/matrix/
 		</div>
 	</div>
 <script>
-var matrix1
-var matrix2
-var matrix3
-function getvalues() {
+var matrix1 = []
+var matrix2 = []
+var matrix3 = []
+function matrixone() {
+    // console.log("getting values")
+    var temp
+    var temp2
+    for (let i = 1; i < 4; i++) {
+        for (let j = 1; j < 4; j++) {
+            var temp1 = []
+            for (let k = 1; k < 4; k++) {
+                temp = document.getElementById(""+i+"."+j+"."+k+"").value
+                temp1.push(temp)
+            }
+            if (i==1) {
+                matrix1[j-1]=temp1
+            }
+            else if (i==2) {
+                matrix2[j-1]=temp1
+            }
+            else if (i==3) {
+                matrix3[j-1]=temp1
+            }
+        }
+    }
+    return matrix1
+}
+function matrixtwo() {
     // console.log("getting values")
     var matrix1 = []
     var matrix2 = []
@@ -164,26 +188,55 @@ function getvalues() {
                 temp1.push(temp)
             }
             if (i==1) {
-                matrix1.push(temp1)
+                matrix1[j-1]=temp1
             }
             else if (i==2) {
-                matrix2.push(temp1)
+                matrix2[j-1]=temp1
             }
             else if (i==3) {
-                matrix3.push(temp1)
+                matrix3[j-1]=temp1
             }
         }
     }
-    // console.log("got values")
-    // console.log(matrix3)
+    return matrix2
+}
+function matrixthree() {
+    // console.log("getting values")
+    var matrix1 = []
+    var matrix2 = []
+    var matrix3 = []
+    var temp
+    var temp2
+    for (let i = 1; i < 4; i++) {
+        for (let j = 1; j < 4; j++) {
+            var temp1 = []
+            for (let k = 1; k < 4; k++) {
+                temp = document.getElementById(""+i+"."+j+"."+k+"").value
+                temp1.push(temp)
+            }
+            if (i==1) {
+                matrix1[j-1]=temp1
+            }
+            else if (i==2) {
+                matrix2[j-1]=temp1
+            }
+            else if (i==3) {
+                matrix3[j-1]=temp1
+            }
+        }
+    }
     return matrix3
 }
 function addmatrix() {
-    var temp3
-    console.log("adding")
-    console.log(getvalues())
+    var m1 = matrixone()
+    var m2 = matrixtwo()
+    var m3 = matrixthree()
+    for (let i = 1; i < 4; i++) {
+        for (let j = 1; j < 4; j++) {
+            
+        }
+    }
+    console.log(m1, m2, m3)
 }
-getvalues()
-
 </script>
 </body>
