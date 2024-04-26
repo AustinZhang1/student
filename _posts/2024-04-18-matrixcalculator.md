@@ -2,7 +2,7 @@
 comments: False
 layout: default
 title: Computer Science Principles Create Performance Task - Matrix Calculator
-permalink: student/matrix/
+permalink: matrix/
 ---
 
 <html lang="en">
@@ -105,44 +105,45 @@ permalink: student/matrix/
 	<div id="upper">
 		<div id="matrix1" class="parent">
 			<h1 class="title">Matrix A</h1>
-			<input class="m1r1" id="1.1.1" type="text" value="1"/>
-			<input class="m1r1" id="1.1.2" type="text" value="2"/>
-			<input class="m1r1" id="1.1.3" type="text" value="3"/>
-			<input class="m1r2" id="1.2.1" type="text" value="4"/>
-			<input class="m1r2" id="1.2.2" type="text" value="5"/>
-			<input class="m1r2" id="1.2.3" type="text" value="6"/>
-			<input class="m1r3" id="1.3.1" type="text" value="7"/>
-			<input class="m1r3" id="1.3.2" type="text" value="8"/>
-			<input class="m1r3" id="1.3.3" type="text" value="9"/>	
+			<input class="m1r1" id="1.1.1" type="number" value="1"/>
+			<input class="m1r1" id="1.1.2" type="number" value="2"/>
+			<input class="m1r1" id="1.1.3" type="number" value="3"/>
+			<input class="m1r2" id="1.2.1" type="number" value="4"/>
+			<input class="m1r2" id="1.2.2" type="number" value="5"/>
+			<input class="m1r2" id="1.2.3" type="number" value="6"/>
+			<input class="m1r3" id="1.3.1" type="number" value="7"/>
+			<input class="m1r3" id="1.3.2" type="number" value="8"/>
+			<input class="m1r3" id="1.3.3" type="number" value="9"/>	
 		</div>
 		<div id="operations">
 			<input class="operation" type="button" value="A x B" onclick="getvalues()"/>
 			<input class="operation" type="button" value="A + B" onclick="addmatrix()"/>
-			<input class="operation" type="button" value="A - B" onclick="getvalues()"/>
+			<input class="operation" type="button" value="A - B" onclick="subtractmatrix()"/>
+            <input class="operation" type="button" value="Reset" onclick="reset()"/>
 		</div>
 		<div id="matrix2" class="parent">
 			<h1 class="title">Matrix B</h1>
-			<input class="m2r1" id="2.1.1" type="text" value="9"/>
-			<input class="m2r1" id="2.1.2" type="text" value="8"/>
-			<input class="m2r1" id="2.1.3" type="text" value="7"/>
-			<input class="m2r2" id="2.2.1" type="text" value="6"/>
-			<input class="m2r2" id="2.2.2" type="text" value="5"/>
-			<input class="m2r2" id="2.2.3" type="text" value="4"/>
-			<input class="m2r3" id="2.3.1" type="text" value="3"/>
-			<input class="m2r3" id="2.3.2" type="text" value="2"/>
-			<input class="m2r3" id="2.3.3" type="text" value="1"/>
+			<input class="m2r1" id="2.1.1" type="number" value="9"/>
+			<input class="m2r1" id="2.1.2" type="number" value="8"/>
+			<input class="m2r1" id="2.1.3" type="number" value="7"/>
+			<input class="m2r2" id="2.2.1" type="number" value="6"/>
+			<input class="m2r2" id="2.2.2" type="number" value="5"/>
+			<input class="m2r2" id="2.2.3" type="number" value="4"/>
+			<input class="m2r3" id="2.3.1" type="number" value="3"/>
+			<input class="m2r3" id="2.3.2" type="number" value="2"/>
+			<input class="m2r3" id="2.3.3" type="number" value="1"/>
 		</div>
         <div id="matrix3" class="parent">
 			<h1 class="title">Result</h1>
-			<input class="m3r1" id="3.1.1" type="text" value="0"/>
-			<input class="m3r1" id="3.1.2" type="text" value="0"/>
-			<input class="m3r1" id="3.1.3" type="text" value="0"/>
-			<input class="m3r2" id="3.2.1" type="text" value="0"/>
-			<input class="m3r2" id="3.2.2" type="text" value="0"/>
-			<input class="m3r2" id="3.2.3" type="text" value="0"/>
-			<input class="m3r3" id="3.3.1" type="text" value="0"/>
-			<input class="m3r3" id="3.3.2" type="text" value="0"/>
-			<input class="m3r3" id="3.3.3" type="text" value="0"/>
+			<input class="m3r1" id="3.1.1" type="number" value="0"/>
+			<input class="m3r1" id="3.1.2" type="number" value="0"/>
+			<input class="m3r1" id="3.1.3" type="number" value="0"/>
+			<input class="m3r2" id="3.2.1" type="number" value="0"/>
+			<input class="m3r2" id="3.2.2" type="number" value="0"/>
+			<input class="m3r2" id="3.2.3" type="number" value="0"/>
+			<input class="m3r3" id="3.3.1" type="number" value="0"/>
+			<input class="m3r3" id="3.3.2" type="number" value="0"/>
+			<input class="m3r3" id="3.3.3" type="number" value="0"/>
 		</div>
 	</div>
 <script>
@@ -150,93 +151,72 @@ var matrix1 = []
 var matrix2 = []
 var matrix3 = []
 function matrixone() {
-    // console.log("getting values")
+    var matrix1 = []
     var temp
-    var temp2
-    for (let i = 1; i < 4; i++) {
         for (let j = 1; j < 4; j++) {
             var temp1 = []
             for (let k = 1; k < 4; k++) {
-                temp = document.getElementById(""+i+"."+j+"."+k+"").value
+                temp = document.getElementById("1."+j+"."+k+"").value
                 temp1.push(temp)
             }
-            if (i==1) {
-                matrix1[j-1]=temp1
-            }
-            else if (i==2) {
-                matrix2[j-1]=temp1
-            }
-            else if (i==3) {
-                matrix3[j-1]=temp1
-            }
+            matrix1[j-1]=temp1
         }
-    }
     return matrix1
 }
 function matrixtwo() {
-    // console.log("getting values")
-    var matrix1 = []
     var matrix2 = []
-    var matrix3 = []
     var temp
-    var temp2
-    for (let i = 1; i < 4; i++) {
         for (let j = 1; j < 4; j++) {
             var temp1 = []
             for (let k = 1; k < 4; k++) {
-                temp = document.getElementById(""+i+"."+j+"."+k+"").value
+                temp = document.getElementById("2."+j+"."+k+"").value
                 temp1.push(temp)
             }
-            if (i==1) {
-                matrix1[j-1]=temp1
-            }
-            else if (i==2) {
-                matrix2[j-1]=temp1
-            }
-            else if (i==3) {
-                matrix3[j-1]=temp1
-            }
+            matrix2[j-1]=temp1
         }
-    }
     return matrix2
 }
 function matrixthree() {
-    // console.log("getting values")
-    var matrix1 = []
-    var matrix2 = []
     var matrix3 = []
     var temp
-    var temp2
-    for (let i = 1; i < 4; i++) {
         for (let j = 1; j < 4; j++) {
             var temp1 = []
             for (let k = 1; k < 4; k++) {
-                temp = document.getElementById(""+i+"."+j+"."+k+"").value
+                temp = document.getElementById("3."+j+"."+k+"").value
                 temp1.push(temp)
             }
-            if (i==1) {
-                matrix1[j-1]=temp1
-            }
-            else if (i==2) {
-                matrix2[j-1]=temp1
-            }
-            else if (i==3) {
-                matrix3[j-1]=temp1
-            }
+            matrix3[j-1]=temp1
         }
-    }
     return matrix3
 }
 function addmatrix() {
+    console.log("adding")
     var m1 = matrixone()
     var m2 = matrixtwo()
-    var m3 = matrixthree()
+    var temp
     for (let i = 1; i < 4; i++) {
         for (let j = 1; j < 4; j++) {
-            
+            document.getElementById("3."+i+"."+j+"").value = parseInt(m1[i-1][j-1]) + parseInt(m2[i-1][j-1])
         }
     }
-    console.log(m1, m2, m3)
+}
+function subtractmatrix() {
+    console.log("subtracting")
+    var m1 = matrixone()
+    var m2 = matrixtwo()
+    var temp
+    for (let i = 1; i < 4; i++) {
+        for (let j = 1; j < 4; j++) {
+            document.getElementById("3."+i+"."+j+"").value = parseInt(m1[i-1][j-1]) - parseInt(m2[i-1][j-1])
+        }
+    }
+}
+function reset() {
+    for (let i = 1; i < 4; i++) {
+        for (let j = 1; j < 4; j++) {
+            document.getElementById("3."+i+"."+j+"").value = 0
+        }
+    }
 }
 </script>
 </body>
