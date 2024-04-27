@@ -1,10 +1,8 @@
 ---
-comments: False
 layout: default
 title: Matrix Calculator
 permalink: matrix/
 ---
-
 <html lang="en">
 <head>
 <title>Matrix Calculator</title>
@@ -14,17 +12,11 @@ permalink: matrix/
             height: 100%;
             background-image: url("https://wallpapers.com/images/hd/dark-gradient-6bly12umg2d4psr2.jpg");
         }
-        header {
-            text-align: center;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
         #upper {
             border-radius: 25px;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 12%;
+            margin-top: 8%;
             margin-bottom: auto;
             display: flex;
             flex-flow: row wrap;
@@ -51,7 +43,8 @@ permalink: matrix/
         }
         .operation {
             width: 10em;
-            height: 12%
+            height: 12%;
+            font-family: Verdana, sans-serif;
         }
         .parent {
             margin-bottom: 2%;
@@ -64,7 +57,7 @@ permalink: matrix/
         }
         .title {
             order: 1;
-            font-family: "Times New Roman", serif;
+            font-family: Verdana, sans-serif;
             width: 9em;
             height: 10%;
             text-align: center;
@@ -138,48 +131,22 @@ permalink: matrix/
 var matrix1 = [[],[],[]]
 var matrix2 = [[],[],[]]
 var matrix3 = [[],[],[]]
-function matrixone() {
-    var matrix1 = [[],[],[]]
+function getmatrix(matrixnumber) {
+    matrixtemp = [[],[],[]]
     var temp
         for (let j = 1; j < 4; j++) {
             var temp1 = []
             for (let k = 1; k < 4; k++) {
-                temp = document.getElementById("1."+j+"."+k+"").value
+                temp = document.getElementById(""+matrixnumber+"."+j+"."+k+"").value
                 temp1.push(temp)
             }
-            matrix1[j-1]=temp1
+            matrixtemp[j-1]=temp1
         }
-    return matrix1
-}
-function matrixtwo() {
-    var matrix2 = [[],[],[]]
-    var temp
-        for (let j = 1; j < 4; j++) {
-            var temp1 = []
-            for (let k = 1; k < 4; k++) {
-                temp = document.getElementById("2."+j+"."+k+"").value
-                temp1.push(temp)
-            }
-            matrix2[j-1]=temp1
-        }
-    return matrix2
-}
-function matrixthree() {
-    var matrix3 = [[],[],[]]
-    var temp
-        for (let j = 1; j < 4; j++) {
-            var temp1 = []
-            for (let k = 1; k < 4; k++) {
-                temp = document.getElementById("3."+j+"."+k+"").value
-                temp1.push(temp)
-            }
-            matrix3[j-1]=temp1
-        }
-    return matrix3
+    return matrixtemp
 }
 function addmatrix() {
-    var m1 = matrixone()
-    var m2 = matrixtwo()
+    var m1 = getmatrix(1)
+    var m2 = getmatrix(2)
     var temp
     for (let i = 1; i < 4; i++) {
         for (let j = 1; j < 4; j++) {
@@ -188,8 +155,8 @@ function addmatrix() {
     }
 }
 function subtractmatrix() {
-    var m1 = matrixone()
-    var m2 = matrixtwo()
+    var m1 = getmatrix(1)
+    var m2 = getmatrix(2)
     var temp
     for (let i = 1; i < 4; i++) {
         for (let j = 1; j < 4; j++) {
@@ -198,8 +165,8 @@ function subtractmatrix() {
     }
 }
 function multiplymatrix() {
-    var m1 = matrixone()
-    var m2 = matrixtwo()
+    var m1 = getmatrix(1)
+    var m2 = getmatrix(2)
     for (let a = 0; a < 3; a++) {
         for (let b = 0; b < 3; b++) {
             document.getElementById("3."+(a+1)+"."+(b+1)+"").value = parseInt(m1[a][0]) * parseInt(m2[0][b]) + parseInt(m1[a][1]) * parseInt(m2[1][b]) + parseInt(m1[a][2]) * parseInt(m2[2][b])
@@ -217,3 +184,4 @@ function reset() {
 }
 </script>
 </body>
+</html>
