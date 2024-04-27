@@ -10,12 +10,12 @@ permalink: matrix/
 <title>Matrix Calculator</title>
     <!-- Styles for the webpage -->
     <style>
-        /* header {
+        header {
             text-align: center;
             display: block;
             margin-left: auto;
             margin-right: auto;
-        } */
+        }
         #upper {
             margin-left: auto;
             margin-right: auto;
@@ -147,11 +147,11 @@ permalink: matrix/
 		</div>
 	</div>
 <script>
-var matrix1 = []
+var matrix1 = [[],[],[]]
 var matrix2 = []
 var matrix3 = []
 function matrixone() {
-    var matrix1 = []
+    var matrix1 = [[],[],[]]
     var temp
         for (let j = 1; j < 4; j++) {
             var temp1 = []
@@ -164,7 +164,7 @@ function matrixone() {
     return matrix1
 }
 function matrixtwo() {
-    var matrix2 = []
+    var matrix2 = [[],[],[]]
     var temp
         for (let j = 1; j < 4; j++) {
             var temp1 = []
@@ -177,7 +177,7 @@ function matrixtwo() {
     return matrix2
 }
 function matrixthree() {
-    var matrix3 = []
+    var matrix3 = [[],[],[]]
     var temp
         for (let j = 1; j < 4; j++) {
             var temp1 = []
@@ -217,7 +217,7 @@ function multiplymatrix() {
         for (let j = 1; j < 4; j++) {
             for (let a = 0; a < 3; a++) {
                 for (let b = 0; b < 3; b++) {
-                    document.getElementById("3."+i+"."+j+"").value = parseInt(m1[a][b]) * parseInt(m2[b][a])
+                    document.getElementById("3."+i+"."+j+"").value = parseInt(m1[a][1]) * parseInt(m2[1][b]) + parseInt(m1[a][2]) * parseInt(m2[1][1]) + parseInt(m1[a][3]) * parseInt(m2[b][1]) 
                 }
             }
         }
