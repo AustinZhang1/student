@@ -5,18 +5,27 @@ permalink: matrix/
 ---
 <html lang="en">
 <head>
-<title>Matrix Calculator</title>
     <style>
         body {
             width: 100%;
             height: 100%;
             background-image: linear-gradient(#020e21,#0d473e);
         }
+        .header {
+            margin-top: 2em;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Courier, monospace;
+            text-align: center;
+            font-size: 5em;
+            color: blue;
+        }
         #upper {
             border-radius: 25px;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 8%;
+            margin-top: 4%;
             margin-bottom: auto;
             display: flex;
             flex-flow: row wrap;
@@ -96,6 +105,9 @@ permalink: matrix/
     </style>
 </head>
 <body>
+    <div>
+        <h1 class="header">3x3 Matrix Calculator</h1>
+    </div>
     <div id="upper">
         <div id="matrix1" class="parent">
             <h1 class="title">MATRIX A</h1>
