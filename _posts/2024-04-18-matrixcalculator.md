@@ -8,7 +8,6 @@ permalink: matrix/
 <html lang="en">
 <head>
 <title>Matrix Calculator</title>
-    <!-- Styles for the webpage -->
     <style>
         header {
             text-align: center;
@@ -23,7 +22,6 @@ permalink: matrix/
             flex-flow: row wrap;
             width: 40em;
             height: 35em;
-            /* background: #FAFAFA; */
             align-items: center;
             justify-content: center;
         }
