@@ -156,7 +156,7 @@ permalink: matrix/
 var matrix1 = [[],[],[]]
 var matrix2 = [[],[],[]]
 var matrix3 = [[],[],[]]
-function getmatrix(matrixnumber) {
+function getmatrix(matrixnumber) { // This function 
     matrixtemp = [[],[],[]]
     var temp
         for (let j = 1; j < 4; j++) {
