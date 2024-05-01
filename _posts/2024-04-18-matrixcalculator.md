@@ -105,6 +105,7 @@ permalink: matrix/
     </style>
 </head>
 <body>
+<!--  -->
     <div>
         <h1 class="header">3x3 Matrix Calculator</h1>
     </div>
@@ -156,7 +157,7 @@ permalink: matrix/
 var matrix1 = [[],[],[]]
 var matrix2 = [[],[],[]]
 var matrix3 = [[],[],[]]
-function getmatrix(matrixnumber) { // This function 
+function getmatrix(matrixnumber) { // This function parses the HTML to get the values of the two matrices
     matrixtemp = [[],[],[]]
     var temp
         for (let j = 1; j < 4; j++) {
@@ -169,7 +170,7 @@ function getmatrix(matrixnumber) { // This function
         }
     return matrixtemp
 }
-function operations(operation) {
+function operations(operation) { // This function ensures that all values are filled in for the two matrices. If they aren't, raises an error. 
     var alert = false
     for (let i = 1; i < 3; i++) {
         for (let j = 1; j < 4; j++) {
@@ -193,7 +194,7 @@ function operations(operation) {
         }
     }
 }
-function addmatrix() {
+function addmatrix() { // Function to add two matrices. This function uses two nested for loops to access every value in the two matrices, then adds the respective values.
     var m1 = getmatrix(1)
     var m2 = getmatrix(2)
     var temp
@@ -203,7 +204,7 @@ function addmatrix() {
         }
     }
 }
-function subtractmatrix() {
+function subtractmatrix() { // Function to subtract two matrices. This function also uses two nested for loops to access every value in the two matrices, then subtracts the respective values.
     var m1 = getmatrix(1)
     var m2 = getmatrix(2)
     var temp
@@ -213,7 +214,7 @@ function subtractmatrix() {
         }
     }
 }
-function multiplymatrix() {
+function multiplymatrix() { // Function to multiply two matrices. This function uses two nested for loops, then multiplies each row of matrix A by each column of matrix B.
     var m1 = getmatrix(1)
     var m2 = getmatrix(2)
     for (let a = 0; a < 3; a++) {
@@ -222,7 +223,7 @@ function multiplymatrix() {
         }
     }
 }
-function reset() {
+function reset() { // Resets matrix A and B back to all 0's, then resets the result matrix to blank.
     for (let i = 1; i < 4; i++) {
         for (let j = 1; j < 4; j++) {
             document.getElementById("1."+i+"."+j+"").value = 0
