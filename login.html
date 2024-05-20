@@ -107,8 +107,7 @@
                 "Content-Type": "application/json"
               },
               body: JSON.stringify(obj)
-            });
-
+            })
             if (!response.ok) {
               throw new Error('Authentication request was not successful');
             }

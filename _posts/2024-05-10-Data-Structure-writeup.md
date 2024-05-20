@@ -52,43 +52,54 @@ These next three images show the URL request and Body requirements for Get, Post
 
 ### Show the JSON response data for 200 success conditions on GET, POST, and UPDATE methods in Postman
 
+Here I show the GET, POST, and UPDATE methods with 200 success messages.
+
 ![Image](https://github.com/nighthawkcoders/teacher_portfolio/assets/142526022/b859a066-c944-46d0-ada4-a89564635f62)
 ![Image](https://github.com/nighthawkcoders/teacher_portfolio/assets/142526022/10873aa1-db95-4045-aa87-5c316017cb97)
 ![image](https://github.com/AustinZhang1/student/assets/142526022/ce24b0d6-1b45-4cf9-a766-aea6846312cc)
 
 ### Show the JSON response for error for 400 when missing body on a POST request in Postman
 
+When the post request is missing a body inside the curly braces, it will return a 400 bad request error.
+
 ![image](https://github.com/AustinZhang1/student/assets/142526022/699f2e5f-bf1e-4c27-a956-8dec3ca3d9d5)
 
 ### Show the JSON response for error for 404 when providing an unknown user ID to a UPDATE request in Postman
 
+In postman, when the user id is unknown, the UPDATE request will not work and will return a 404 error.
+
 ![image](https://github.com/AustinZhang1/student/assets/142526022/43f99f10-c23e-4042-ad7d-299497eb8630)
 
+## Blog JavaScript API fetch code and formatting code to display JSON
 
-
-![Image](https://github.com/nighthawkcoders/teacher_portfolio/assets/142526022/83807a7b-01e7-439e-abd7-39bb5ab28277)
-
-![Image](https://github.com/nighthawkcoders/teacher_portfolio/assets/142526022/62bfa176-1e0d-4aff-9966-d5dad96239f8)
-
-![Image](https://github.com/nighthawkcoders/teacher_portfolio/assets/142526022/2e7265ca-537f-42a8-ae37-1dd9ca3556b1)
-
-![Image](https://github.com/nighthawkcoders/teacher_portfolio/assets/142526022/2d2457a6-fada-4647-a994-168b928814b3)
-
-![Image](https://github.com/nighthawkcoders/teacher_portfolio/assets/142526022/54cb0433-776f-41c7-aa13-1c8af9291bad)
-
-![Image](https://github.com/nighthawkcoders/teacher_portfolio/assets/142526022/67e6cd30-9b15-4e1b-90e4-73c7691b327d)
-
-Blog JavaScript API fetch code and formatting code to display JSON.
- Show response of JSON objects from fetch of GET, POST, and UPDATE methods in Chrome inspect.
+### Show response of JSON objects from fetch of GET, POST, and UPDATE methods in Chrome inspect
 
 ![image](https://github.com/AustinZhang1/student/assets/142526022/f07df2a4-1b29-4f67-9a39-47a7b666cc00)
 
- Show a demo (GET) of obtaining an Array of JSON objects that are formatted into the browsers screen in the Chrome browser.
+### Show a demo (GET) of obtaining an Array of JSON objects that are formatted into the browsers screen in the Chrome browser
 
 ![image](https://github.com/AustinZhang1/student/assets/142526022/c4e5d45b-5e9f-423d-bc5a-5b99e41ae4b9)
 
- Describe fetch and method that obtained the Array of JSON objects in JavaScript code.
- Show code that performs iteration and formatting of data into HTML in JavaScript code.
- Show a demo (POST or UPDATE) gathering and sending input and receiving a response that show update. Repeat this demo showing both success and failure in the Chrome browser.
- Show and describe code that handles success. Describe how code shows success to the user in the Chrome Browser screen in JavaScript code.
- Show and describe code that handles failure. Describe how the code shows failure to the user in the Chrome Browser screen in JavaScript code.
+### Describe fetch and method that obtained the Array of JSON objects in JavaScript code
+
+This screenshot demonstrates the fetch method in my frontend Javascript code. It uses the fetch method to send a POST request to get the backend data. Then, it checks if the authentication of the data is correct, and correctly logs in users that are authorized.
+
+![image](https://github.com/AustinZhang1/student/assets/142526022/f2f3e859-f75d-429a-82d0-5dc07006c400)
+
+### Show code that performs iteration and formatting of data into HTML in JavaScript code
+
+This code properly formats the data into Javascript code so that it is usable.
+
+![image](https://github.com/AustinZhang1/student/assets/142526022/8d290949-501d-43b5-b6d6-a103be9c4474)
+
+### Show and describe code that handles success. Describe how code shows success to the user in the Chrome Browser screen in JavaScript code
+
+This code handles successes when trying to authenticate the user.
+
+![image](https://github.com/AustinZhang1/student/assets/142526022/4602e873-7fe6-4b87-8214-27c62f47b4f9)
+
+### Show and describe code that handles failure. Describe how the code shows failure to the user in the Chrome Browser screen in JavaScript code
+
+This code handles failures when trying to authenticate the user.s
+
+![image](https://github.com/AustinZhang1/student/assets/142526022/0d20763c-eb39-4c16-837b-e102b8c2d73b)
