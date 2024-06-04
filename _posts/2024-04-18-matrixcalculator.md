@@ -233,5 +233,5 @@ function reset() { // Resets matrix A and B back to all 0's, then resets the res
     }
 }
 </script>
-</body>A
+</body>
 </html>
